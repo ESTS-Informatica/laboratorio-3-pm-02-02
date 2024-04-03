@@ -18,7 +18,7 @@ public class AirTransportationTest {
 
     @BeforeEach
     public void setUp() {
-        airTransport = new AirTransportation("Boeing 747", 10);
+        airTransport = new AirTransportation(500.0, 1000.0, "Flight 1", 50);
     }
 
     @Test

@@ -39,12 +39,13 @@ public class GroundTransportation extends Transport
     
     @Override
     public double getPriceWithFees() {
-        // Calcula o preço com a taxa de honorários de 4%
-        return getPrice() * (1.0 + (0.04 * getFees()));
+        // Calcula o preço com a taxa de honorários de 3%
+        return getPrice() * (1.0 + (0.03 * getFees()));
     }
+
     
     @Override
     public String toString() {
-        return super.toString() + "\nLicense Plate: " + licensePlate;
+        return super.toString() + "\nLicense Plate: " + getLicensePlate();
     }
 }

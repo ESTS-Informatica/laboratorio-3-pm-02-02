@@ -132,5 +132,49 @@ public class Transport {
     public String getTransportType() {
         return "Transporte genérico";
     }
+    
+     public static void main(String[] args) {
+        // Criar uma instância da classe ShippingCompany para a empresa "RELIABLE-MOVING"
+        ShippingCompany company = new ShippingCompany("RELIABLE-MOVING");
 
+        // Adicionar um objeto GroundTransportation à coleção
+        GroundTransportation groundTransport = new GroundTransportation("ABC123");
+        company.add(groundTransport);
+
+        // Adicionar dois objetos AirTransportation à coleção
+        AirTransportation airTransport1 = new AirTransportation();
+        airTransport1.setName("Flight 1");
+        airTransport1.setNumberOfContainers(50);
+        airTransport1.setOrigin("Origem"); // Defina a origem
+        airTransport1.setDestination("Destino"); // Defina o destino
+        airTransport1.setPrice(100.0); // Defina o preço
+        airTransport1.setFees(3.0);
+
+        AirTransportation airTransport2 = new AirTransportation();
+        airTransport2.setName("Flight 2");
+        airTransport2.setNumberOfContainers(75);
+        airTransport2.setOrigin("Origem"); // Defina a origem
+        airTransport2.setDestination("Destino"); // Defina o destino
+        airTransport2.setPrice(100.0); // Defina o preço
+        airTransport2.setFees(3.0);
+        
+        company.add(airTransport2);
+
+        // Adicionar um objeto Lorry à coleção
+        Lorry lorry = new Lorry("DEF456", 20, 2);
+        company.add(lorry);
+
+        // Adicionar um objeto Van à coleção
+        Van van = new Van("GHI789", 100);
+        company.add(van);
+
+        // Mostrar os transportes criados
+        System.out.println("Transportes criados:");
+        for (Transport transport : company.getTransports()) {
+            System.out.println(transport.toString());
+        }
+    }
 }
+
+
+

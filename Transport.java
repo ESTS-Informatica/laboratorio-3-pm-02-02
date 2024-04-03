@@ -4,7 +4,7 @@
  *
  * @author POO
  */
-
+// class
 public class Transport {
 
     private static int auto = 0; 

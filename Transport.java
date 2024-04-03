@@ -149,6 +149,7 @@ public class Transport {
         airTransport1.setDestination("Destino"); // Defina o destino
         airTransport1.setPrice(100.0); // Defina o preço
         airTransport1.setFees(3.0);
+        company.add(airTransport1);
 
         AirTransportation airTransport2 = new AirTransportation();
         airTransport2.setName("Flight 2");

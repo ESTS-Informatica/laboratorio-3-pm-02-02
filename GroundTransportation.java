@@ -36,5 +36,15 @@ public class GroundTransportation extends Transport
     public void setLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
     }
-   
+    
+    @Override
+    public double getPriceWithFees() {
+        // Calcula o preço com a taxa de honorários de 4%
+        return getPrice() * (1.0 + (0.04 * getFees()));
+    }
+    
+    @Override
+    public String toString() {
+        return super.toString() + "\nLicense Plate: " + licensePlate;
+    }
 }

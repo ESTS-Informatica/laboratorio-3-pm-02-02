@@ -54,6 +54,16 @@ public class AirTransportation extends Transport
         // Taxa de honorários para transporte aéreo é de 4%
         return getPrice() * 0.04;
     }
-
+    
+    @Override
+    public double getPriceWithFees() {
+        // Calcula o preço com a taxa de honorários de 3%
+        return getPrice() * (1.0 + (0.03 * getFees()));
+    }
+    
+    @Override
+    public String toString() {
+        return super.toString() + "\nName: " + name + "\nNumber of Containers: " + numberOfContainers;
+    }
     
 }

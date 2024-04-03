@@ -13,10 +13,15 @@ public class GroundTransportation extends Transport
     /**
      * Construtor para objetos da classe GroundTransportation
      */
-    public GroundTransportation()
+    public GroundTransportation(String licensePlate)
     {
         super();
-        this.licensePlate = "";
+        this.licensePlate = licensePlate;
+    }
+    
+    public GroundTransportation(double weight, double distance, String licensePlate) {
+        super(weight, distance);
+        this.licensePlate = licensePlate;
     }
     
     public String getLicensePlate() {

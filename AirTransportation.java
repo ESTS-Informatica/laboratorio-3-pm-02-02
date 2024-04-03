@@ -20,6 +20,13 @@ public class AirTransportation extends Transport
         this.numberOfContainers = 0;
     }
     
+    // Construtor
+    public AirTransportation(double weight, double distance, String name, int numberOfContainers) {
+        super(weight, distance);
+        this.name = name;
+        this.numberOfContainers = numberOfContainers;
+    }
+    
     public String getName() {
         return this.name;
     }

@@ -16,13 +16,24 @@ public class Transport {
     private double fees;
     private boolean available;
 
-    public Transport() {
+     public Transport() {
         this.id = "T-" + String.format("%03d", ++auto);
         this.origin = "";
         this.destination = "";
         this.price = 0.0;
         this.fees = 0.0;
         this.available = true;
+    }
+
+    // Construtor com parâmetros weight e distance
+    public Transport(double weight, double distance) {
+        this(); // Chamada para o construtor padrão para definir os valores iniciais
+    }
+
+    // Construtor com parâmetros weight, distance e fees
+    public Transport(double weight, double distance, double fees) {
+        this(weight, distance);
+        setFees(fees); 
     }
 
     public String getOrigin() {
